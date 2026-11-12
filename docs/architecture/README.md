@@ -21,6 +21,20 @@ A modular monolith is an application organized into separate functional modules 
 
 This approach reduces early operational complexity and supports future expansion.
 
+### Initial Architecture Diagram
+
+The following diagram shows the initial logical components of NOCVIAN. It is a simplified overview, not a deployment or security-boundary diagram.
+
+```mermaid
+flowchart TD
+    FE["Frontend: Next.js / React / TypeScript"] --> API["Backend API: Python / FastAPI"]
+    API --> DB[("Database: PostgreSQL")]
+    API --> AI["AI Engine: Python / PyTorch"]
+```
+
+The frontend communicates with the backend API. The backend coordinates authorized access to application data and AI functionality. Additional security and processing boundaries will be documented in later diagrams.
+
+
 ## 3. Initial Technology Stack
 
 | Layer | Technology | Purpose |
